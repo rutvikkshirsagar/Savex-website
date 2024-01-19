@@ -1,0 +1,13 @@
+#pagination-03 .swiper-pagination-bullet {
+    width: 8px; /* Adjust the width of each dot as needed */
+    height: 8px; /* Adjust the height of each dot as needed */
+  border: 1px solid black; /* Set the desired color for the dots */
+    margin: 0 4px; /* Adjust the margin between dots as needed */
+    border-radius: 50%; /* Make dots circular */
+    cursor: pointer;
+  }
+  
+  /* Active dot style */
+  #pagination-03 .swiper-pagination-bullet-active {
+    background-color: #000000; /* Set the color of the active dot */
+  }

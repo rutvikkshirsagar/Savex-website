@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savex Technologies | Home</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="./assets/script/shared/shared.js" defer></script>
+  <!-- <script src="./assets/script/shared/logic.js" defer></script> -->
+
+
+</head>
+
+<body>
+  <nav>
+    <img class="logo" src="./assets/images/savex-logo.png" alt="" srcset="">
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="What are you looking for?...">
+      <i class="ri-search-line"></i>
+    </div>
+
+
+
+    <div class="nav-right">
+      <div class="nav-item-div">
+        <a href="#"><i class="ri-shopping-cart-line"></i></i> Cart</a>
+        <a href="#"><i class="ri-heart-line"></i> Wishlist</a>
+        <a href="#"><i class="ri-phone-line"></i></i> Support</a>
+        <a id="account-link" href="#"><i class="ri-account-circle-line"></i></i> Account</a>
+      </div>
+
+      <button onclick="closeModal()" id="login-button" class="login-btn">Login</button>
+
+
+    </div>
+
+    
+  </nav>
+  <div id="sub-header">
+    <div id="sub-items">
+      <p id="product-sub-header"><a style="text-decoration: none;" href="./product-detail.html" target="_blank" rel="noopener noreferrer">Product</a></p>
+      <p>Join as a Partner</p>
+      <p>Digital Collaboration</p>
+      <p id="my-account-sub-header">My Account</p>
+    </div>
+  </div>
+
+
+  
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top" style="max-width:600px">
+
+
+
+      <div class="w3-container">
+        <div class="w3-section">
+          <label class="modal-input-label"><b>Email</b></label>
+          <input class="w3-input w3-border w3-margin-bottom modal-input" type="text" placeholder="Enter Email"
+            name="usrname" required>
+          <label class="modal-input-label"><b>Password</b></label>
+          <input class="w3-input w3-border modal-input" type="password" placeholder="Enter Password" name="psw"
+            required>
+          <button id="modal-login-button" class="w3-button w3-block w3-section w3-padding login-button"
+            type="submit">Login</button>
+        </div>
+      </div>
+      <div class="w3-container w3-border-top w3-padding-16 ">
+        <button onclick="document.getElementById('id01').style.display='none'" type="button"
+          class="w3-button">Cancel</button>
+
+        <span class="w3-right w3-padding w3-hide-small forgot-password-label"> <a href="#"
+            style="text-decoration: none; color:rgb(186, 186, 186);">Forgot password?</a></span>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="mobile-nav">
+
+    <div id="menu-toggle" class="hamburger-toggle-icon">
+      <i id="menu-open" onclick="w3_open()" class="ri-menu-2-line"></i>
+      <i id="menu-close" onclick="w3_close()" class="ri-menu-3-line" style="display: none;"></i>
+      <img class="logo" src="./assets/images/savex-logo.png" alt="" srcset="">
+      <div>
+        <i class="ri-shopping-cart-fill"></i>
+        <i onclick="document.getElementById('id01').style.display='block'" class="ri-login-box-line"></i>
+      </div>
+    </div>
+  </div>
+  <!-- Overlay -->
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close &times;</button>
+    <a href="./shopping-cart.html" class="w3-bar-item w3-button"><i class="ri-shopping-cart-line"></i>Cart</a>
+    <a href="#" class="w3-bar-item w3-button"><i class="ri-heart-line"></i> Wishlist</a>
+    <a href="#" class="w3-bar-item w3-button"><i class="ri-phone-line"></i> Support</a>
+    <a href="./product-detail.html" class="w3-bar-item w3-button"><i class="ri-phone-line"></i> Product</a>
+    <a href="./checkout.html" class="w3-bar-item w3-button"><i class="ri-phone-line"></i> Checkout</a>
+    <a id="account-link" class="w3-bar-item w3-button"><i class="ri-account-circle-line"></i> Account</a>
+  </div>
+  <!-- <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div> -->
+
+
+  <section id="account-section">
+      <!-- <img class="w3-image" src="./assets/images/account-div-bg.svg" alt="" srcset=""> -->
+    <div class="container">
+        <div class="card">
+            <div>
+                <h2 class="heading">Account Details</h2>
+            <p class="sub-heading">Edit or Change your account details.</p>
+            </div>
+
+            <div>
+                <input class="input" type="text" placeholder="Enter your Full name">
+                <br>
+                <input class="input" type="text" placeholder="Enter your Email">
+            </div>
+
+            <button class="button">Save Changes</button>
+        </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <br>
+
+  <section id="address-section">
+    <div class="borderd-container">
+<div class="top-left-div">
+    <h3 class="heading">My Address</h3>
+    <p class="sub-heading">View or add new address</p>
+</div>
+<div class="address-wrapper">
+
+<div class="address-card">
+    <div class="badge">
+        Shopping
+    </div>
+    <div>
+        <p>Ramesh Jadhav</p>
+    <p>Flat no 11, Santosh Nivas,123, 
+        Pune
+        Maharashtra
+        Pincode - 123456.</p>
+    </div>
+    <div class="button-bar">
+        <p class="edit">Edit</p>
+        <p class="remove">Remove</p>
+    </div>
+</div>
+<div class="address-card">
+    <div class="badge">
+        Billing
+    </div>
+    <div>
+        <p>Ramesh Jadhav</p>
+    <p>Flat no 11, Santosh Nivas,123, 
+        Pune
+        Maharashtra
+        Pincode - 123456.</p>
+    </div>
+    <div class="button-bar">
+        <p class="edit">Edit</p>
+        <p class="remove">Remove</p>
+    </div>
+</div>
+<div class="address-card dashed">
+    <img src="./assets/icons/ic_round-manage-accounts.svg" alt="" srcset="">
+    <p>Manage Address</p>
+</div>
+</div>
+    </div>
+  </section>
+
+  <!-- Footer Container Start -->
+  <div class="footer">
+
+
+    <div id="container">
+      <p id="footer-title">Exclusive</p>
+      <p id="footer-links">Subscribe</p>
+      <div>
+        <p id="footer-sub-title">Signup for free Newsletter</p>
+        <input style="border-radius: 4px;
+        border: 1.5px solid var(--Text, #FAFAFA); height:40px" id="footer-input" type="text"
+          placeholder="Enter your email">
+      </div>
+    </div>
+
+    <div id="container">
+      <p id="footer-title">Support</p>
+      <p id="footer-links">111 Bijoy sarani, Banagalore, DH 1515, India.</p>
+      <p id="footer-links">exclusive@gmail.com</p>
+      <p id="footer-links">+91 8015-88888-9999</p>
+    </div>
+
+    <div id="container">
+      <p id="footer-title">Account</p>
+      <p id="footer-links">My Account.</p>
+      <p id="footer-links">Login/Register</p>
+      <p id="footer-links">Cart</p>
+      <p id="footer-links">Wishlist</p>
+    </div>
+
+
+    <div id="container">
+      <p id="footer-title">Quick Links</p>
+      <p id="footer-links">Privacy Policy</p>
+      <p id="footer-links">Terms & Conditions</p>
+      <p id="footer-links">FAQ</p>
+      <p id="footer-links">Contact</p>
+    </div>
+
+    <div id="container">
+      <p id="footer-title">Download App</p>
+      <p id="footer-sub-title">Save $3 with App New User Only</p>
+      <div id="footer-download-div">
+        <div>
+          <img src="./assets/images/Qr Code.png" alt="">
+        </div>
+
+        <div>
+          <div>
+            <img src="./assets/images/GooglePlay.png" alt="" srcset="">
+          </div>
+          <div>
+            <img src="./assets/images/AppStore.png" alt="" srcset="">
+          </div>
+        </div>
+
+      </div>
+
+
+      <div id="footer-social-icons">
+        <i class="ri-facebook-line"></i>
+        <i class="ri-twitter-line"></i>
+        <i class="ri-instagram-line"></i>
+        <i class="ri-linkedin-line"></i>
+      </div>
+    </div>
+
+    </div>
+
+    <!-- Footer Container End -->
+
+    <script>
+
+      let loginButton = document.getElementById("modal-login-button");
+      let heroSection = document.getElementById("hero-section");
+      let dashboardDiv = document.getElementById("dashboard");
+      loginButton.addEventListener('click', () => {
+        console.log("login clicked")
+        dashboardDiv.style.display = 'block';
+        heroSection.style.display = 'none';
+      })
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+        document.getElementById("menu-open").style.display = "block";
+        document.getElementById("menu-close").style.display = "none";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+        document.getElementById("menu-open").style.display = "none";
+        document.getElementById("menu-close").style.display = "block";
+      }
+
+
+      function closeModal() {
+        document.getElementById('id01').style.display = 'block';
+      }
+
+  
+    </script>
+</body>
+
+</html>
