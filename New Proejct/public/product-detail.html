@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Savex Technologies | Home</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
   <link rel="stylesheet" href="./product-details.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,13 +43,17 @@
 
     <div class="nav-right">
       <div class="nav-item-div">
-        <a href="#"><i class="ri-shopping-cart-line"></i></i> Cart</a>
+        <a onclick="openModalCart()" href="#"><i class="ri-shopping-cart-line"></i></i> Cart</a>
         <a href="#"><i class="ri-heart-line"></i> Wishlist</a>
         <a href="#"><i class="ri-phone-line"></i></i> Support</a>
+        <a href="#"><i class="ri-file-upload-line"></i></i> Excel</a>
         <a id="account-link" href="#"><i class="ri-account-circle-line"></i></i> Account</a>
       </div>
 
-      <button onclick="closeModal()" id="login-button" class="login-btn">Login</button>
+      <button onclick="openModal()" id="login-button" class="login-btn">Login</button>
+
+    
+
 
 
     </div>
@@ -57,13 +62,287 @@
   </nav>
   <div id="sub-header">
     <div id="sub-items">
-      <p id="product-sub-header">Product</p>
+      <p id="product-sub-header"><a style="text-decoration: none;">Product</a></p>
       <p>Join as a Partner</p>
       <p>Digital Collaboration</p>
       <p id="my-account-sub-header">My Account</p>
     </div>
   </div>
+<div class="navbar-container fade-in" id="desktop-navbar">
+  <div id="navbar">
+    <h1 class="navbar-title">All Categories</h1>
 
+    <img id="navbar-banner" src="./assets/images/image 2 (1).svg" alt="">
+   
+    <div id="nav-main" >
+      <div id="nav-container">
+        <div id="nav-block">
+          <h2 id="nav-block-title">HP</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="./product-grid-after-login.html">Hp</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Print</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Hp Networking </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <div id="nav-block">
+          <h2 id="nav-block-title">Lenovo</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">PC</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Print</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Hp Networking </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <div id="nav-block">
+          <h2 id="nav-block-title">Poly</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Wireless Earbuds</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Bluetooth Headsets</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">USB Headsets </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+      </div>
+      <div id="nav-container">
+        <div id="nav-block">
+          <h2 id="nav-block-title">Vertiv</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Static Transfer Switches</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Swtichgear</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Switch Board </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Buway</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+
+        <div id="nav-block">
+          <h2 id="nav-block-title">Logitech</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Mice</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Combos</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Keyboards </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+
+        <div id="nav-block">
+          <h2 id="nav-block-title">LG</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Refrigerators</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Washing Machine</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Dryer </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Water Purifier</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+      </div>
+      <div id="nav-container">
+        <div id="nav-block">
+          <h2 id="nav-block-title">Ubiquiti</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Switch Flex XG</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Access Point U6 Long-Range</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Switch Pro </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Access Point U6 lite</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <div id="nav-block">
+          <h2 id="nav-block-title">Bose</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Speakers & Headphones</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Accessories</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Database Management </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <div id="nav-block">
+          <h2 id="nav-block-title">BenQ</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Speakers</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Headphones & Earbuds</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Accessories </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">Database Management</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+      </div>
+      <div id="nav-container">
+        <div id="nav-block">
+          <h2 id="nav-block-title">Hewlett Packyard</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Laptops</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Printers</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Monitors </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Desktops</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <br>
+
+        <div id="nav-block">
+          <h2 id="nav-block-title">Solarwinds</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Observability</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Network Management</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">System Management </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Database Management</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
   
   <div id="id01" class="w3-modal">
@@ -94,6 +373,87 @@
     </div>
   </div>
 
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top" style="max-width:600px">
+
+
+
+      <div class=" mini-cart-container">
+        <div class="cart-heading">
+          <p>Free shipping on any order with code OFFERCOUPON</p>
+        </div>
+        <div class="w3-section">
+          <div class="cart-items">
+            <div class="product-item">
+              <div class="image-wrapper">
+                <img src="./assets/images/lenovo-01.png" alt="">
+              </div>
+              <div class="product-details">
+                <p>IPS LCD Gaming Monitor F160123, BLACK COLOUR </p>
+                <div class="discount-div">
+                  <p>1234</p> 
+                  <div class="badge">
+                    5%
+                  </div>
+                </div>
+
+                <p class="cart-total">123123</p>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <div class="image-wrapper">
+                <img src="./assets/images/lenovo-01.png" alt="">
+              </div>
+              <div class="product-details">
+                <p>IPS LCD Gaming Monitor F160123, BLACK COLOUR </p>
+                <div class="discount-div">
+                  <p>1234</p> 
+                  <div class="badge">
+                    5%
+                  </div>
+                </div>
+
+                <p class="cart-total">123123</p>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <div class="image-wrapper">
+                <img src="./assets/images/lenovo-01.png" alt="">
+              </div>
+              <div class="product-details">
+                <p>IPS LCD Gaming Monitor F160123, BLACK COLOUR </p>
+                <div class="discount-div">
+                  <p>1234</p> 
+                  <div class="badge">
+                    5%
+                  </div>
+                </div>
+
+                <p class="cart-total">123123</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w3-container w3-border-top w3-padding-16 ">
+        <div class="cart-footer-text-container">
+          <h2>Cart Subtotal inc. Tax</h2>
+          <h2>23,9800</h2>
+        </div>
+        <button onclick="document.getElementById('id02').style.display = 'none'" type="button"
+          class="view-cart-button">Close</button>
+
+        <button type="button"
+          class="view-cart-button">View Cart</button>
+
+       
+      </div>
+
+    </div>
+  </div>
+
   <div id="mobile-nav">
 
     <div id="menu-toggle" class="hamburger-toggle-icon">
@@ -101,7 +461,7 @@
       <i id="menu-close" onclick="w3_close()" class="ri-menu-3-line" style="display: none;"></i>
       <img class="logo" src="./assets/images/savex-logo.png" alt="" srcset="">
       <div>
-        <i class="ri-shopping-cart-fill"></i>
+        <i  onclick="openModalCart()" class="ri-shopping-cart-fill"></i>
         <i onclick="document.getElementById('id01').style.display='block'" class="ri-login-box-line"></i>
       </div>
     </div>
@@ -115,7 +475,19 @@
     <a href="./product-detail.html" class="w3-bar-item w3-button"><i class="ri-phone-line"></i> Product</a>
     <a href="./checkout.html" class="w3-bar-item w3-button"><i class="ri-phone-line"></i> Checkout</a>
     <a id="account-link" class="w3-bar-item w3-button"><i class="ri-account-circle-line"></i> Account</a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Products <i class="ri-arrow-down-s-line"></i></button>
+      <div class="w3-dropdown-content w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button">HP</a>
+        <a href="#" class="w3-bar-item w3-button">LENOVO</a>
+        <a href="#" class="w3-bar-item w3-button">BENQ</a>
+        <a href="#" class="w3-bar-item w3-button">Vertiv</a>
+      </div>
+    </div>
   </div>
+  <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+
 
 <!-- Product Detail First Section Start -->
 
@@ -137,7 +509,7 @@
            
         </div>
         <div id="big-image">
-            <img id="open-image" src="./assets/images/details/lenovo-01.jpg" height="200" width="200" alt="" srcset="">
+            <img id="open-image" src="./assets/images/details/lenovo-01.jpg">
             <div id="hover">
                 <i style="color: #B9B9B9;" class="ri-zoom-in-line"></i> <p style="color: #B9B9B9;
                 font-size: 14px;
@@ -447,6 +819,33 @@
         dashboardDiv.style.display = 'block';
         heroSection.style.display = 'none';
       })
+      
+      let productLink = document.getElementById("product-sub-header");
+   
+      let desktopNavbarContainer = document.getElementById("desktop-navbar");
+      let desktopNavbar = document.getElementById("navbar");
+      loginButton.addEventListener('click', () => {
+        console.log("login clicked")
+        dashboardDiv.style.display = 'block';
+        heroSection.style.display = 'none';
+      })
+
+
+      productLink.addEventListener('mouseenter',() =>{
+        console.log('show navabr');
+        desktopNavbar.classList.add('fade-in');
+        desktopNavbar.classList.remove('fade-out');
+        desktopNavbarContainer.style.display = "flex";
+        desktopNavbar.style.display = "block";
+      })
+
+      desktopNavbar.addEventListener('mouseleave',() =>{
+        console.log('hide navabr');
+        desktopNavbar.classList.remove('fade-in');
+        desktopNavbar.classList.add('fade-out');
+    
+        
+      })
       function w3_open() {
         document.getElementById("mySidebar").style.display = "block";
         document.getElementById("myOverlay").style.display = "block";
@@ -457,13 +856,17 @@
       function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
         document.getElementById("myOverlay").style.display = "none";
-        document.getElementById("menu-open").style.display = "none";
-        document.getElementById("menu-close").style.display = "block";
+        document.getElementById("menu-open").style.display = "block";
+        document.getElementById("menu-close").style.display = "none";
       }
 
 
-      function closeModal() {
+      function openModal() {
         document.getElementById('id01').style.display = 'block';
+      }
+
+      function openModalCart() {
+        document.getElementById('id02').style.display = 'block';
       }
 
       let bigImage = document.getElementById("open-image");

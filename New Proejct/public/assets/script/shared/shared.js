@@ -62,7 +62,7 @@ const swiper = new Swiper('.swiper', {
 
   var swiperCategory = new Swiper("#swiper-category", {
     direction: 'horizontal',
-    spaceBetween: 10,
+    spaceBetween: 1,
     // loop:true,
     // autoplay: {
     //     delay: 1000,
@@ -77,13 +77,13 @@ const swiper = new Swiper('.swiper', {
         
       },
       360: {
-        slidesPerView: .8,
+        slidesPerView: 1.2,
       },
       520: {
-        slidesPerView: 1.5,
+        slidesPerView: 1.8,
       },
       768: {
-        slidesPerView: 1,
+        slidesPerView: 2,
       },
       1000: {
         slidesPerView: 2.5,
@@ -103,3 +103,25 @@ const swiper = new Swiper('.swiper', {
     },
     
   });
+
+
+  const ctx = document.getElementById('myChart');
+
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });

@@ -22,9 +22,19 @@ let shippingDetailsButton = document.getElementById("child1");
 let paymentDetailsButton = document.getElementById("child2");
 let menuToggleButton = document.getElementById('menu-toggle');
 
+
+let productMainItem = document.getElementById("product-main-item");
+let productDropdown = document.getElementById("product-brands-dropdown");
+let myAccountDropdown = document.getElementById("my-account-dropdown");
 // showNavbar();
 
 
+productMainItem.addEventListener('click',() =>{
+    console.log("click product");
+    let value = productDropdown.style.display;
+    console.log(value);
+
+})
 shippingDetailsButton.addEventListener('click',() =>{
     shoppingItemsDiv.style.display = 'block';
     shippingDetailsButton.classList.add('active');
@@ -155,3 +165,5 @@ function showAccountNavbar(){
 function hideAccountNavbar(){
     accountNavbar.style.display = 'none';
 }
+
+

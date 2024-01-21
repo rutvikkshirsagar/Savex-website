@@ -19,6 +19,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <script src="./assets/script/shared/shared.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
   <!-- <script src="./assets/script/shared/logic.js" defer></script> -->
   <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
 
@@ -454,18 +456,17 @@
 
   <div id="mobile-nav">
 
-    <div id="menu-toggle" class="hamburger-toggle-icon">
-      <i id="menu-open" onclick="w3_open()" class="ri-menu-2-line"></i>
-      <i id="menu-close" onclick="w3_close()" class="ri-menu-3-line" style="display: none;"></i>
+    <div id="menu-toggle"  class="hamburger-toggle-icon">
+      <i id="menu-open" onclick="toggleMobileNavigation()" class="ri-menu-2-line"></i>
       <img class="logo" src="./assets/images/savex-logo.png" alt="" srcset="">
       <div>
-        <i class="ri-shopping-cart-fill"></i>
+        <i  onclick="openModalCart()" class="ri-shopping-cart-fill"></i>
         <i onclick="document.getElementById('id01').style.display='block'" class="ri-login-box-line"></i>
       </div>
     </div>
   </div>
   <!-- Overlay -->
-  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
+  <!-- <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
     <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close &times;</button>
     <a href="./shopping-cart.html" class="w3-bar-item w3-button"><i class="ri-shopping-cart-line"></i>Cart</a>
     <a href="#" class="w3-bar-item w3-button"><i class="ri-heart-line"></i> Wishlist</a>
@@ -474,11 +475,162 @@
     <a href="./checkout.html" class="w3-bar-item w3-button"><i class="ri-phone-line"></i> Checkout</a>
     <a id="account-link" class="w3-bar-item w3-button"><i class="ri-account-circle-line"></i> Account</a>
     <div class="w3-dropdown-hover">
-      <button class="w3-button">Dropdown <i class="fa fa-caret-down"></i></button>
+      <button class="w3-button">Products <i class="ri-arrow-down-s-line"></i></button>
       <div class="w3-dropdown-content w3-bar-block">
-        <a href="#" class="w3-bar-item w3-button">Link</a>
-        <a href="#" class="w3-bar-item w3-button">Link</a>
+        <a href="#" class="w3-bar-item w3-button">HP</a>
+        <a href="#" class="w3-bar-item w3-button">LENOVO</a>
+        <a href="#" class="w3-bar-item w3-button">BENQ</a>
+        <a href="#" class="w3-bar-item w3-button">Vertiv</a>
       </div>
+    </div>
+  </div> -->
+
+  <div style="display: none;" class="mobile-nav">
+    <div class="brand">
+      <i onclick="toggleMobileNavigation()" class="ri-close-line"></i>
+      <img height="30" src="./assets/images/savex-logo.png" alt="" srcset="">
+    </div>
+    <hr>
+    <div class="nav-items">
+      <div class="item">
+        <i class="ri-home-2-line"></i>
+        <p>Home</p>
+      </div>
+      <div class="item-arrow" id="product-main-item" onclick="toggleProductDropdown()">
+        <div class="item">
+          <i class="ri-device-line"></i>
+        <p>Products</p>
+        </div>
+        <i id="item-arrow" class="ri-arrow-right-s-line"></i>
+
+        
+      </div>
+      <div style="display: none;" class="product-brands" id="product-brands-dropdown">
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>HP</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Lenovo</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Benq</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Bose</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+      </div>
+
+      <div class="item-arrow" onclick="toggleAccountDropdown()">
+        <div class="item">
+          <i class="ri-device-line"></i>
+        <p>My Account</p>
+        </div>
+        <i id="account-item-arrow" class="ri-arrow-right-s-line"></i>
+
+        
+      </div>
+
+      <div style="display: none;" class="product-brands" id="my-account-dropdown">
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Account</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Orders</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Address Book</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Wishlist</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>My Cart</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Settings</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+      </div>
+      <div class="item">
+        <i class="ri-user-heart-line"></i>
+        <p>Join as a Partner</p>
+      </div>
+
+      <div class="item">
+        <i class="ri-group-line"></i>
+        <p>Digital Collaboration</p>
+      </div>
+      <div class="item">
+        <i class="ri-phone-line"></i>
+        <p>Support</p>
+      </div>
+
+      <div class="item">
+        <i class="ri-file-upload-line"></i>
+        <p>Excel</p>
+      </div>
+
+      <button onclick="openModal()" id="login-button" class="mobile-login-button">Login</button>
+
     </div>
   </div>
   <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
@@ -874,15 +1026,18 @@
     </div>
 
     <!-- Footer Container End -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script>
+ 
 
+    <script>
+      
       let productLink = document.getElementById("product-sub-header");
       let loginButton = document.getElementById("modal-login-button");
       let heroSection = document.getElementById("hero-section");
       let dashboardDiv = document.getElementById("dashboard");
       let desktopNavbarContainer = document.getElementById("desktop-navbar");
       let desktopNavbar = document.getElementById("navbar");
+      let productDropdown = document.getElementById("product-brands-dropdown");
+let myAccountDropdown = document.getElementById("my-account-dropdown");
       loginButton.addEventListener('click', () => {
         console.log("login clicked")
         dashboardDiv.style.display = 'block';
@@ -915,8 +1070,8 @@
       function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
         document.getElementById("myOverlay").style.display = "none";
-        document.getElementById("menu-open").style.display = "none";
-        document.getElementById("menu-close").style.display = "block";
+        document.getElementById("menu-open").style.display = "block";
+        document.getElementById("menu-close").style.display = "none";
       }
 
 
@@ -928,26 +1083,65 @@
         document.getElementById('id02').style.display = 'block';
       }
 
-      const ctx = document.getElementById('myChart');
-
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-          datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
+      function toggleMobileNavigation(){
+        console.log(document.querySelector(".mobile-nav").style.display)
+        if(document.querySelector(".mobile-nav").style.display == "none"){
+          document.querySelector(".mobile-nav").style.display = "block";
+          return;
         }
-      });
+
+        else  if(document.querySelector(".mobile-nav").style.display == "block"){
+          document.querySelector(".mobile-nav").style.display = "none";
+          return;
+        }
+      }
+
+      function toggleProductDropdown(){
+        console.log("product dropdown");
+        let itemArrow = document.getElementById("item-arrow");
+        console.log(productDropdown.style.display);
+        console.log(itemArrow.className);
+        console.log(productDropdown.style.display === "none");
+        if(productDropdown.style.display === "none"){
+        itemArrow.classList  = "ri-arrow-down-s-line";
+          productDropdown.style.transition = "display 3s";
+          productDropdown.style.display = "block";
+          console.log("open");
+          return;
+        }
+        else if(productDropdown.style.display === 'block'){
+        itemArrow.classList  = "ri-arrow-right-s-line";
+
+          productDropdown.style.display = 'none';
+          console.log("close")
+          return;
+        }
+       
+      }
+
+      function toggleAccountDropdown(){
+        console.log("account dropdown");
+        let itemArrow = document.getElementById("account-item-arrow");
+        console.log(myAccountDropdown.style.display);
+        console.log(itemArrow.className);
+        console.log(myAccountDropdown.style.display === "none");
+        if(myAccountDropdown.style.display === "none"){
+        itemArrow.classList  = "ri-arrow-down-s-line";
+          myAccountDropdown.style.transition = "display 3s";
+          myAccountDropdown.style.display = "block";
+          console.log("open");
+          return;
+        }
+        else if(myAccountDropdown.style.display === 'block'){
+        itemArrow.classList  = "ri-arrow-right-s-line";
+
+          myAccountDropdown.style.display = 'none';
+          console.log("close")
+          return;
+        }
+       
+      }
+     
     </script>
 </body>
 
