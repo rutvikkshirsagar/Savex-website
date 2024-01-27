@@ -114,8 +114,16 @@
           <h2 id="nav-block-title">HP</h2>
           <div id="nav-items">
             <div id="nav-item-link">
-              <a id="nav-link" href="./products.html">Hp</a>
+              <a id="nav-link">Hp</a>
               <i class="ri-arrow-right-s-line"></i>
+
+              <div class="nav-item-sidenav">
+                <p id="nav-item-link">Desktop</p>
+                <p id="nav-item-link"><a  href="./products.html">Laptop</a></p>
+                <p id="nav-item-link">Workstations</p>
+                <p id="nav-item-link">Gaming Pc's</p>
+                <p id="nav-item-link">Media servers</p>
+              </div>
             </div>
             <div id="nav-item-link">
               <a id="nav-link" href="#">Print</a>
@@ -1183,6 +1191,7 @@ accountSubNavigation.addEventListener('mouseleave',() =>{
         console.log('show navabr');
         desktopNavbar.classList.add('fade-in');
         desktopNavbar.classList.remove('fade-out');
+        document.getElementById("myOverlay").style.display = "block";
         desktopNavbarContainer.style.display = "flex";
         desktopNavbar.style.display = "block";
       })
@@ -1190,6 +1199,8 @@ accountSubNavigation.addEventListener('mouseleave',() =>{
       desktopNavbar.addEventListener('mouseleave',() =>{
         console.log('hide navabr');
         desktopNavbar.classList.remove('fade-in');
+        document.getElementById("myOverlay").style.display = "none";
+
         desktopNavbar.classList.add('fade-out');
     
         
