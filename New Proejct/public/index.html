@@ -67,6 +67,40 @@
       <p>Digital Collaboration</p>
       <p id="my-account-sub-header">My Account</p>
     </div>
+    <div style="display: none;" id="account-navbar">
+   
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/dash.png" alt="" srcset="">
+          <p>Account</p>
+        </div>
+      </div>
+
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/orders.png" alt="" srcset="">
+          <p>Orders</p>
+        </div>
+      </div>
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/home.png" alt="" srcset="">
+          <p>Address Book</p>
+        </div>
+      </div>
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/heart-line.png" alt="" srcset="">
+          <p>Wishlist</p>
+        </div>
+      </div>
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/setting.svg" alt="" srcset="">
+          <p>Settings</p>
+        </div>
+      </div>
+    </div>
   </div>
 <div class="navbar-container fade-in" id="desktop-navbar">
   <div id="navbar">
@@ -80,7 +114,7 @@
           <h2 id="nav-block-title">HP</h2>
           <div id="nav-items">
             <div id="nav-item-link">
-              <a id="nav-link" href="./product-grid-after-login.html">Hp</a>
+              <a id="nav-link" href="./products.html">Hp</a>
               <i class="ri-arrow-right-s-line"></i>
             </div>
             <div id="nav-item-link">
@@ -378,7 +412,7 @@
 
 
 
-      <div class=" mini-cart-container">
+      <div class="mini-cart-container">
         <div class="cart-heading">
           <p>Free shipping on any order with code OFFERCOUPON</p>
         </div>
@@ -446,7 +480,7 @@
           class="view-cart-button">Close</button>
 
         <button type="button"
-          class="view-cart-button">View Cart</button>
+          class="view-cart-button" style="text-decoration: none;"><a href="./shopping-cart.html">View Cart</a></button>
 
        
       </div>
@@ -485,6 +519,47 @@
     </div>
   </div> -->
 
+
+  <!-- Brand Side Navigation Start -->
+  <div style="display: none;" class="brand-nav">
+    <div class="brand">
+      <i onclick="toggleBrandNavigation()" class="ri-arrow-left-line"></i>
+      <img height="30" src="./assets/images/savex-logo.png" alt="" srcset="">
+    </div>
+    <hr>
+    <div class="nav-items">
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">PC</a></p>
+      </div>
+
+      
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">Print</a></p>
+      </div>
+
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">Networking</a></p>
+      </div>
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">Consumer Desktop</a></p>
+      </div>
+
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">Consumer Accessories</a></p>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <!-- Mobile Side Navigation Start -->
   <div style="display: none;" class="mobile-nav">
     <div class="brand">
       <i onclick="toggleMobileNavigation()" class="ri-close-line"></i>
@@ -494,7 +569,7 @@
     <div class="nav-items">
       <div class="item">
         <i class="ri-home-2-line"></i>
-        <p>Home</p>
+        <p><a style="text-decoration: none;" href="./index.html">Home</a></p>
       </div>
       <div class="item-arrow" id="product-main-item" onclick="toggleProductDropdown()">
         <div class="item">
@@ -506,8 +581,8 @@
         
       </div>
       <div style="display: none;" class="product-brands" id="product-brands-dropdown">
-        <div class="item-arrow">
-          <div class="item">
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('hp')">
+          <div class="item" >
             <i class="ri-circle-fill"></i>
           <p>HP</p>
           </div>
@@ -515,8 +590,8 @@
   
           
         </div>
-        <div class="item-arrow">
-          <div class="item">
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('lenovo')">
+          <div class="item" >
             <i class="ri-circle-fill"></i>
           <p>Lenovo</p>
           </div>
@@ -524,8 +599,8 @@
   
           
         </div>
-        <div class="item-arrow">
-          <div class="item">
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('benq')">
+          <div class="item" >
             <i class="ri-circle-fill"></i>
           <p>Benq</p>
           </div>
@@ -533,10 +608,55 @@
   
           
         </div>
-        <div class="item-arrow">
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('bose')">
           <div class="item">
             <i class="ri-circle-fill"></i>
           <p>Bose</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('poly')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Poly</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('ubi')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Ubiquiti</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('solar')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Solarwinds</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('logi')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Logitech</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('lg')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>LG</p>
           </div>
           <i class="ri-arrow-right-s-line"></i>
   
@@ -558,7 +678,7 @@
         <div class="item-arrow">
           <div class="item">
             <i class="ri-circle-fill"></i>
-          <p>Account</p>
+          <p><a style="text-decoration: none;" href="./account-page.html">Account</a></p>
           </div>
           <i class="ri-arrow-right-s-line"></i>
   
@@ -567,7 +687,7 @@
         <div class="item-arrow">
           <div class="item">
             <i class="ri-circle-fill"></i>
-          <p>Orders</p>
+          <p><a style="text-decoration: none;" href="./account-page.html">Orders</a></p>
           </div>
           <i class="ri-arrow-right-s-line"></i>
   
@@ -576,7 +696,7 @@
         <div class="item-arrow">
           <div class="item">
             <i class="ri-circle-fill"></i>
-          <p>Address Book</p>
+          <p><a style="text-decoration: none;" href="./account-page.html">Address Book</a></p>
           </div>
           <i class="ri-arrow-right-s-line"></i>
   
@@ -585,7 +705,7 @@
         <div class="item-arrow">
           <div class="item">
             <i class="ri-circle-fill"></i>
-          <p>Wishlist</p>
+          <p><a style="text-decoration: none;" href="./account-page.html">Wishlist</a></p>
           </div>
           <i class="ri-arrow-right-s-line"></i>
   
@@ -594,7 +714,7 @@
         <div class="item-arrow">
           <div class="item">
             <i class="ri-circle-fill"></i>
-          <p>My Cart</p>
+          <p><a style="text-decoration: none;" href="./account-page.html">My Cart</a></p>
           </div>
           <i class="ri-arrow-right-s-line"></i>
   
@@ -603,7 +723,7 @@
         <div class="item-arrow">
           <div class="item">
             <i class="ri-circle-fill"></i>
-          <p>Settings</p>
+          <p><a style="text-decoration: none;" href="./account-page.html">Settings</a></p>
           </div>
           <i class="ri-arrow-right-s-line"></i>
   
@@ -1038,6 +1158,20 @@
       let desktopNavbar = document.getElementById("navbar");
       let productDropdown = document.getElementById("product-brands-dropdown");
 let myAccountDropdown = document.getElementById("my-account-dropdown");
+let accountSubHeader = document.getElementById("my-account-sub-header");
+let accountSubNavigation = document.getElementById("account-navbar");
+let brandNaviagtionItems = document.querySelector(".brand-nav");
+console.log(brandNaviagtionItems);
+
+
+accountSubHeader.addEventListener('click',()=>{
+  accountSubNavigation.style.display = "flex";
+})
+
+accountSubNavigation.addEventListener('mouseleave',() =>{
+  accountSubNavigation.style.display = "none";
+})
+
       loginButton.addEventListener('click', () => {
         console.log("login clicked")
         dashboardDiv.style.display = 'block';
@@ -1076,6 +1210,8 @@ let myAccountDropdown = document.getElementById("my-account-dropdown");
 
 
       function openModal() {
+        document.querySelector(".mobile-nav").style.display = "none";
+
         document.getElementById('id01').style.display = 'block';
       }
 
@@ -1092,6 +1228,21 @@ let myAccountDropdown = document.getElementById("my-account-dropdown");
 
         else  if(document.querySelector(".mobile-nav").style.display == "block"){
           document.querySelector(".mobile-nav").style.display = "none";
+          return;
+        }
+      }
+
+      function toggleBrandNavigation(){
+        console.log(document.querySelector(".brand-nav").style.display)
+        if(document.querySelector(".brand-nav").style.display == "none"){
+          document.querySelector(".brand-nav").style.display = "block";
+          document.querySelector(".mobile-nav").style.display = "none";
+          return;
+        }
+
+        else  if(document.querySelector(".brand-nav").style.display == "block"){
+          document.querySelector(".brand-nav").style.display = "none";
+          document.querySelector(".mobile-nav").style.display = "block";
           return;
         }
       }
@@ -1117,6 +1268,12 @@ let myAccountDropdown = document.getElementById("my-account-dropdown");
           return;
         }
        
+      }
+
+      function toggleBrandProductsNavigation(brand){
+        console.log(brand)
+        document.querySelector(".mobile-nav").style.display = "none";
+        document.querySelector(".brand-nav").style.display = "block";
       }
 
       function toggleAccountDropdown(){

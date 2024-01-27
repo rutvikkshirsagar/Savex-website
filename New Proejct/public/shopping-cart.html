@@ -41,13 +41,17 @@
 
     <div class="nav-right">
       <div class="nav-item-div">
-        <a href="#"><i class="ri-shopping-cart-line"></i></i> Cart</a>
+        <a onclick="openModalCart()" href="#"><i class="ri-shopping-cart-line"></i></i> Cart</a>
         <a href="#"><i class="ri-heart-line"></i> Wishlist</a>
         <a href="#"><i class="ri-phone-line"></i></i> Support</a>
+        <a href="#"><i class="ri-file-upload-line"></i></i> Excel</a>
         <a id="account-link" href="#"><i class="ri-account-circle-line"></i></i> Account</a>
       </div>
 
-      <button onclick="closeModal()" id="login-button" class="login-btn">Login</button>
+      <button onclick="openModal()" id="login-button" class="login-btn">Login</button>
+
+    
+
 
 
     </div>
@@ -56,13 +60,326 @@
   </nav>
   <div id="sub-header">
     <div id="sub-items">
-      <p id="product-sub-header">Product</p>
+      <p id="product-sub-header"><a style="text-decoration: none;">Product</a></p>
       <p>Join as a Partner</p>
       <p>Digital Collaboration</p>
       <p id="my-account-sub-header">My Account</p>
     </div>
-  </div>
+    <div style="display: none;" id="account-navbar">
+      <div class="account-nav-item">
+<div class="account-nav-item-wrapper">
+  <img src="./assets/icons/dash.png" alt="" srcset="">
+  <p><a style="text-decoration: none;" href="./account-page.html" target="_blank" rel="noopener noreferrer">Account</a></p>
+</div>
+      </div>
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/dash.png" alt="" srcset="">
+          <p>Account</p>
+        </div>
+      </div>
 
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/orders.png" alt="" srcset="">
+          <p>Orders</p>
+        </div>
+      </div>
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/home.png" alt="" srcset="">
+          <p>Address Book</p>
+        </div>
+      </div>
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/heart-line.png" alt="" srcset="">
+          <p>Wishlist</p>
+        </div>
+      </div>
+      <div class="account-nav-item">
+        <div class="account-nav-item-wrapper">
+          <img src="./assets/icons/setting.svg" alt="" srcset="">
+          <p>Settings</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="navbar-container fade-in" id="desktop-navbar">
+  <div id="navbar">
+    <h1 class="navbar-title">All Categories</h1>
+
+    <img id="navbar-banner" src="./assets/images/image 2 (1).svg" alt="">
+   
+    <div id="nav-main" >
+      <div id="nav-container">
+        <div id="nav-block">
+          <h2 id="nav-block-title">HP</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="./products.html">Hp</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Print</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Hp Networking </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <div id="nav-block">
+          <h2 id="nav-block-title">Lenovo</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">PC</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Print</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Hp Networking </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <div id="nav-block">
+          <h2 id="nav-block-title">Poly</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Wireless Earbuds</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Bluetooth Headsets</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">USB Headsets </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+      </div>
+      <div id="nav-container">
+        <div id="nav-block">
+          <h2 id="nav-block-title">Vertiv</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Static Transfer Switches</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Swtichgear</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Switch Board </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Buway</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+
+        <div id="nav-block">
+          <h2 id="nav-block-title">Logitech</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Mice</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Combos</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Keyboards </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+
+        <div id="nav-block">
+          <h2 id="nav-block-title">LG</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Refrigerators</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Washing Machine</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Dryer </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Water Purifier</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+      </div>
+      <div id="nav-container">
+        <div id="nav-block">
+          <h2 id="nav-block-title">Ubiquiti</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Switch Flex XG</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Access Point U6 Long-Range</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Switch Pro </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Access Point U6 lite</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <div id="nav-block">
+          <h2 id="nav-block-title">Bose</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Speakers & Headphones</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Accessories</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Database Management </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Consumer Desktop</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <div id="nav-block">
+          <h2 id="nav-block-title">BenQ</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Speakers</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Headphones & Earbuds</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Accessories </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">Database Management</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+      </div>
+      <div id="nav-container">
+        <div id="nav-block">
+          <h2 id="nav-block-title">Hewlett Packyard</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Laptops</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Printers</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Monitors </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Desktops</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+        <br>
+
+        <div id="nav-block">
+          <h2 id="nav-block-title">Solarwinds</h2>
+          <div id="nav-items">
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Observability</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Network Management</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">System Management </a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div id="nav-item-link">
+              <a id="nav-link" href="#">Database Management</a>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <p id="view-all-link"><strong>View All</strong></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
   
   <div id="id01" class="w3-modal">
@@ -93,20 +410,100 @@
     </div>
   </div>
 
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top" style="max-width:600px">
+
+
+
+      <div class=" mini-cart-container">
+        <div class="cart-heading">
+          <p>Free shipping on any order with code OFFERCOUPON</p>
+        </div>
+        <div class="w3-section">
+          <div class="cart-items">
+            <div class="product-item">
+              <div class="image-wrapper">
+                <img src="./assets/images/lenovo-01.png" alt="">
+              </div>
+              <div class="product-details">
+                <p>IPS LCD Gaming Monitor F160123, BLACK COLOUR </p>
+                <div class="discount-div">
+                  <p>1234</p> 
+                  <div class="badge">
+                    5%
+                  </div>
+                </div>
+
+                <p class="cart-total">123123</p>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <div class="image-wrapper">
+                <img src="./assets/images/lenovo-01.png" alt="">
+              </div>
+              <div class="product-details">
+                <p>IPS LCD Gaming Monitor F160123, BLACK COLOUR </p>
+                <div class="discount-div">
+                  <p>1234</p> 
+                  <div class="badge">
+                    5%
+                  </div>
+                </div>
+
+                <p class="cart-total">123123</p>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <div class="image-wrapper">
+                <img src="./assets/images/lenovo-01.png" alt="">
+              </div>
+              <div class="product-details">
+                <p>IPS LCD Gaming Monitor F160123, BLACK COLOUR </p>
+                <div class="discount-div">
+                  <p>1234</p> 
+                  <div class="badge">
+                    5%
+                  </div>
+                </div>
+
+                <p class="cart-total">123123</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w3-container w3-border-top w3-padding-16 ">
+        <div class="cart-footer-text-container">
+          <h2>Cart Subtotal inc. Tax</h2>
+          <h2>23,9800</h2>
+        </div>
+        <button onclick="document.getElementById('id02').style.display = 'none'" type="button"
+          class="view-cart-button">Close</button>
+
+        <button type="button"
+          class="view-cart-button" style="text-decoration: none;"><a href="./shopping-cart.html">View Cart</a></button>
+
+       
+      </div>
+
+    </div>
+  </div>
+
   <div id="mobile-nav">
 
-    <div id="menu-toggle" class="hamburger-toggle-icon">
-      <i id="menu-open" onclick="w3_open()" class="ri-menu-2-line"></i>
-      <i id="menu-close" onclick="w3_close()" class="ri-menu-3-line" style="display: none;"></i>
+    <div id="menu-toggle"  class="hamburger-toggle-icon">
+      <i id="menu-open" onclick="toggleMobileNavigation()" class="ri-menu-2-line"></i>
       <img class="logo" src="./assets/images/savex-logo.png" alt="" srcset="">
       <div>
-        <i class="ri-shopping-cart-fill"></i>
+        <i  onclick="openModalCart()" class="ri-shopping-cart-fill"></i>
         <i onclick="document.getElementById('id01').style.display='block'" class="ri-login-box-line"></i>
       </div>
     </div>
   </div>
   <!-- Overlay -->
-  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
+  <!-- <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
     <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close &times;</button>
     <a href="./shopping-cart.html" class="w3-bar-item w3-button"><i class="ri-shopping-cart-line"></i>Cart</a>
     <a href="#" class="w3-bar-item w3-button"><i class="ri-heart-line"></i> Wishlist</a>
@@ -114,8 +511,253 @@
     <a href="./product-detail.html" class="w3-bar-item w3-button"><i class="ri-phone-line"></i> Product</a>
     <a href="./checkout.html" class="w3-bar-item w3-button"><i class="ri-phone-line"></i> Checkout</a>
     <a id="account-link" class="w3-bar-item w3-button"><i class="ri-account-circle-line"></i> Account</a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Products <i class="ri-arrow-down-s-line"></i></button>
+      <div class="w3-dropdown-content w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button">HP</a>
+        <a href="#" class="w3-bar-item w3-button">LENOVO</a>
+        <a href="#" class="w3-bar-item w3-button">BENQ</a>
+        <a href="#" class="w3-bar-item w3-button">Vertiv</a>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- Brand Side Navigation Start -->
+  <div style="display: none;" class="brand-nav">
+    <div class="brand">
+      <i onclick="toggleBrandNavigation()" class="ri-arrow-left-line"></i>
+      <img height="30" src="./assets/images/savex-logo.png" alt="" srcset="">
+    </div>
+    <hr>
+    <div class="nav-items">
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">PC</a></p>
+      </div>
+
+      
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">Print</a></p>
+      </div>
+
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">Networking</a></p>
+      </div>
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">Consumer Desktop</a></p>
+      </div>
+
+      <div class="item">
+        <i class="ri-circle-fill"></i>
+        <p><a style="text-decoration: none;" href="./products.html">Consumer Accessories</a></p>
+      </div>
+
+
+    </div>
   </div>
-  <!-- <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div> -->
+
+
+
+  <!-- Mobile Side Navigation Start -->
+  <div style="display: none;" class="mobile-nav">
+    <div class="brand">
+      <i onclick="toggleMobileNavigation()" class="ri-close-line"></i>
+      <img height="30" src="./assets/images/savex-logo.png" alt="" srcset="">
+    </div>
+    <hr>
+    <div class="nav-items">
+      <div class="item">
+        <i class="ri-home-2-line"></i>
+        <p><a style="text-decoration: none;" href="./index.html">Home</a></p>
+      </div>
+      <div class="item-arrow" id="product-main-item" onclick="toggleProductDropdown()">
+        <div class="item">
+          <i class="ri-device-line"></i>
+        <p>Products</p>
+        </div>
+        <i id="item-arrow" class="ri-arrow-right-s-line"></i>
+
+        
+      </div>
+      <div style="display: none;" class="product-brands" id="product-brands-dropdown">
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('hp')">
+          <div class="item" >
+            <i class="ri-circle-fill"></i>
+          <p>HP</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('lenovo')">
+          <div class="item" >
+            <i class="ri-circle-fill"></i>
+          <p>Lenovo</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('benq')">
+          <div class="item" >
+            <i class="ri-circle-fill"></i>
+          <p>Benq</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('bose')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Bose</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('poly')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Poly</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('ubi')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Ubiquiti</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('solar')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Solarwinds</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('logi')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Logitech</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow" onclick="toggleBrandProductsNavigation('lg')">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>LG</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+      </div>
+
+      <div class="item-arrow" onclick="toggleAccountDropdown()">
+        <div class="item">
+          <i class="ri-device-line"></i>
+        <p><a style="text-decoration: none;" href="./account-page.html">My Account</a></p>
+        </div>
+        <i id="account-item-arrow" class="ri-arrow-right-s-line"></i>
+
+        
+      </div>
+
+      <div style="display: none;" class="product-brands" id="my-account-dropdown">
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Account</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Orders</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Address Book</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Wishlist</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>My Cart</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+        <div class="item-arrow">
+          <div class="item">
+            <i class="ri-circle-fill"></i>
+          <p>Settings</p>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+  
+          
+        </div>
+      </div>
+      <div class="item">
+        <i class="ri-user-heart-line"></i>
+        <p>Join as a Partner</p>
+      </div>
+
+      <div class="item">
+        <i class="ri-group-line"></i>
+        <p>Digital Collaboration</p>
+      </div>
+      <div class="item">
+        <i class="ri-phone-line"></i>
+        <p>Support</p>
+      </div>
+
+      <div class="item">
+        <i class="ri-file-upload-line"></i>
+        <p>Excel</p>
+      </div>
+
+      <button onclick="openModal()" id="login-button" class="mobile-login-button">Login</button>
+
+    </div>
+  </div>
+  <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
 
 
   <div id="shopping-cart-container">
@@ -218,12 +860,12 @@
           <div class="bottom-div">
             <div style="display: flex; align-items: center; gap:10px; margin-top:40px; margin-left:20px;">
               <i style="color: #F58634; font-size: 20px;" class="ri-arrow-left-line"></i>
-              <p href="/public/checkout.html" style="color: #F58634;
+              <p  style="color: #F58634;
               cursor: pointer;
               font-size: 16px;
               font-style: normal;
               font-weight: 500;
-              line-height: 24px; /* 150% */"> <a href="./checkout.html">Continue Shopping</a></p>
+              line-height: 24px; /* 150% */"> <a href="./index.html">Continue Shopping</a></p>
             </div>
           </div>
       </div>
@@ -518,7 +1160,8 @@ line-height: 26px;"> <a style="text-decoration: none;" href="./checkout.html">PR
                 font-style: normal;
                 border: none;
                 font-weight: 700;
-                line-height: 26px;">PROCEDD TO CHECKOUT</button>
+                text-decoration: none;
+                line-height: 26px;"><a href="./checkout.html">PROCEDD TO CHECKOUT</a></button>
                 </div>
                         
         </div>
@@ -631,6 +1274,151 @@ line-height: 26px;"> <a style="text-decoration: none;" href="./checkout.html">PR
         document.getElementById('id01').style.display = 'block';
       }
 
+      let productLink = document.getElementById("product-sub-header");
+      let desktopNavbarContainer = document.getElementById("desktop-navbar");
+      let desktopNavbar = document.getElementById("navbar");
+      let productDropdown = document.getElementById("product-brands-dropdown");
+let myAccountDropdown = document.getElementById("my-account-dropdown");
+let accountSubHeader = document.getElementById("my-account-sub-header");
+let accountSubNavigation = document.getElementById("account-navbar");
+let brandNaviagtionItems = document.querySelector(".brand-nav");
+console.log(brandNaviagtionItems);
+
+
+accountSubHeader.addEventListener('click',()=>{
+  accountSubNavigation.style.display = "flex";
+})
+
+accountSubNavigation.addEventListener('mouseleave',() =>{
+  accountSubNavigation.style.display = "none";
+})
+
+      loginButton.addEventListener('click', () => {
+        console.log("login clicked")
+        dashboardDiv.style.display = 'block';
+        heroSection.style.display = 'none';
+      })
+
+
+      productLink.addEventListener('mouseenter',() =>{
+        console.log('show navabr');
+        desktopNavbar.classList.add('fade-in');
+        desktopNavbar.classList.remove('fade-out');
+        desktopNavbarContainer.style.display = "flex";
+        desktopNavbar.style.display = "block";
+      })
+
+      desktopNavbar.addEventListener('mouseleave',() =>{
+        console.log('hide navabr');
+        desktopNavbar.classList.remove('fade-in');
+        desktopNavbar.classList.add('fade-out');
+    
+        
+      })
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+        document.getElementById("menu-open").style.display = "block";
+        document.getElementById("menu-close").style.display = "none";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+        document.getElementById("menu-open").style.display = "block";
+        document.getElementById("menu-close").style.display = "none";
+      }
+
+
+      function openModal() {
+        document.querySelector(".mobile-nav").style.display = "none";
+
+        document.getElementById('id01').style.display = 'block';
+      }
+
+      function openModalCart() {
+        document.getElementById('id02').style.display = 'block';
+      }
+
+      function toggleMobileNavigation(){
+        console.log(document.querySelector(".mobile-nav").style.display)
+        if(document.querySelector(".mobile-nav").style.display == "none"){
+          document.querySelector(".mobile-nav").style.display = "block";
+          return;
+        }
+
+        else  if(document.querySelector(".mobile-nav").style.display == "block"){
+          document.querySelector(".mobile-nav").style.display = "none";
+          return;
+        }
+      }
+
+      function toggleBrandNavigation(){
+        console.log(document.querySelector(".brand-nav").style.display)
+        if(document.querySelector(".brand-nav").style.display == "none"){
+          document.querySelector(".brand-nav").style.display = "block";
+          document.querySelector(".mobile-nav").style.display = "none";
+          return;
+        }
+
+        else  if(document.querySelector(".brand-nav").style.display == "block"){
+          document.querySelector(".brand-nav").style.display = "none";
+          document.querySelector(".mobile-nav").style.display = "block";
+          return;
+        }
+      }
+
+      function toggleProductDropdown(){
+        console.log("product dropdown");
+        let itemArrow = document.getElementById("item-arrow");
+        console.log(productDropdown.style.display);
+        console.log(itemArrow.className);
+        console.log(productDropdown.style.display === "none");
+        if(productDropdown.style.display === "none"){
+        itemArrow.classList  = "ri-arrow-down-s-line";
+          productDropdown.style.transition = "display 3s";
+          productDropdown.style.display = "block";
+          console.log("open");
+          return;
+        }
+        else if(productDropdown.style.display === 'block'){
+        itemArrow.classList  = "ri-arrow-right-s-line";
+
+          productDropdown.style.display = 'none';
+          console.log("close")
+          return;
+        }
+       
+      }
+
+      function toggleBrandProductsNavigation(brand){
+        console.log(brand)
+        document.querySelector(".mobile-nav").style.display = "none";
+        document.querySelector(".brand-nav").style.display = "block";
+      }
+
+      function toggleAccountDropdown(){
+        console.log("account dropdown");
+        let itemArrow = document.getElementById("account-item-arrow");
+        console.log(myAccountDropdown.style.display);
+        console.log(itemArrow.className);
+        console.log(myAccountDropdown.style.display === "none");
+        if(myAccountDropdown.style.display === "none"){
+        itemArrow.classList  = "ri-arrow-down-s-line";
+          myAccountDropdown.style.transition = "display 3s";
+          myAccountDropdown.style.display = "block";
+          console.log("open");
+          return;
+        }
+        else if(myAccountDropdown.style.display === 'block'){
+        itemArrow.classList  = "ri-arrow-right-s-line";
+
+          myAccountDropdown.style.display = 'none';
+          console.log("close")
+          return;
+        }
+       
+      }
       const ctx = document.getElementById('myChart');
 
       new Chart(ctx, {
