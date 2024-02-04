@@ -30,6 +30,70 @@ body {
     display: none;
   }
 
+  /* Login Modal Start */
+  .login-modal{
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 30%;
+height: 375.75px;
+flex-shrink: 0;
+border-radius: 8px;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+z-index: 1000;
+  }
+
+  .login-modal .header{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: #F58634;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    color: #FFF;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 120% */
+display: flex;
+align-items: center;
+p{
+  margin-left: 30px;
+}
+  }
+
+  .login-modal .header svg{
+    position: absolute;
+    top: -30px;
+    right: 20px;
+  }
+
+  .login-modal .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-modal .content .input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .login-modal .content .input-wrapper input {
+    width: 250px;
+    border-radius: 8px;
+border: 1px solid #D9D9D9;
+width: 100%;
+height: 40px;
+flex-shrink: 0;
+  }
+
+  /* Login Modal END */
 
   .nav-item-div {
     position: relative;
@@ -381,6 +445,10 @@ line-height: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
+    border: none;
+    width: 40%;
+    height: 40px;
+    cursor: pointer;
     /* 150% */
   }
 
@@ -405,6 +473,7 @@ line-height: 24px;
     font-weight: 500;
     line-height: 24px;
     /* 160% */
+    cursor: pointer;
     text-decoration-line: underline;
   }
 
@@ -439,7 +508,7 @@ line-height: 24px;
   }
 
   #swiper-category {
-    height: 610px;
+    height: 632px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -600,6 +669,16 @@ line-height: 24px;
   }
 
   #footer-links {
+    color: #FAFAFA;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 120% */
+  }
+  #footer-links:hover {
+    cursor: pointer;
+   text-decoration: underline;
     color: #FAFAFA;
     font-size: 20px;
     font-style: normal;
@@ -1311,6 +1390,71 @@ height: 1px;
   .mobile-nav{
     display: none;
   }
+  /* Login Modal Start */
+  .login-modal{
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 30%;
+height: 375.75px;
+flex-shrink: 0;
+border-radius: 8px;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+z-index: 1000;
+  }
+
+  .login-modal .header{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: #F58634;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    color: #FFF;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 120% */
+display: flex;
+align-items: center;
+p{
+  margin-left: 30px;
+}
+  }
+
+  .login-modal .header svg{
+    position: absolute;
+    top: -30px;
+    right: 20px;
+  }
+
+  .login-modal .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-modal .content .input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .login-modal .content .input-wrapper input {
+    width: 250px;
+    border-radius: 8px;
+border: 1px solid #D9D9D9;
+width: 100%;
+height: 40px;
+flex-shrink: 0;
+  }
+
+  /* Login Modal END */
+
   .nav-item-div {
     width: 455px;
   }
@@ -1323,6 +1467,7 @@ height: 1px;
     color: rgb(0, 0, 0);
     text-decoration: none;
     margin: 0 15px;
+    font-size: 15px;
   }
 
   nav a:hover {
@@ -1384,7 +1529,6 @@ height: 1px;
     gap: 20px;
     /* overflow: scroll; */
     height: 100%;
-    z-index: 100;
   }
 
   .navbar-title{
@@ -1437,6 +1581,35 @@ height: 1px;
 
   #nav-link{
     text-decoration: none;
+  } 
+  
+  .nav-item-sidenav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.288);
+    width: 300px;
+    z-index: 2000;
+    text-decoration: none;
+  }
+
+  .nav-item-sidenav p > a{
+    text-decoration: none;
+  }
+#nav-item-link:hover .nav-item-sidenav {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #f1f1f1;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.288);
+  width: 300px;
+  z-index: 2000;
+  cursor: pointer;
   }
   .mini-cart-container{
     z-index: 300;
@@ -1687,7 +1860,7 @@ line-height: 24px;
   }
 
   #swiper-category {
-    height: 610px;
+    height: 632px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -1852,6 +2025,17 @@ line-height: 24px;
     line-height: 24px;
     /* 120% */
   }
+  #footer-links:hover {
+    cursor: pointer;
+    text-decoration: underline;
+
+    color: #FAFAFA;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 120% */
+  }
 
   #footer-download-div {
     display: flex;
@@ -2000,16 +2184,16 @@ line-height: 24px;
 
     p {
       color: #000;
-      font-size: 24px;
+      font-size: 22px;
       font-style: normal;
-      font-weight: 400;
+      font-weight: 300;
       line-height: normal;
     }
   }
 
   .total {
     color: #000;
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -2510,6 +2694,10 @@ line-height: normal;
   top: 0;
   left: 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.login-modal{
+  display: none;
+
 }
 
 .brand-nav{
@@ -3050,16 +3238,16 @@ line-height: 24px;
   .explore-button {
     cursor: pointer;
     position: absolute;
-    left: 15px;
-    bottom: 20px;
+    left: 20px;
+    bottom: 30px;
     border: none;
-    width: 87px;
-    height: 38px;
+    width: 100px;
+    height: 48px;
     flex-shrink: 0;
     border-radius: 8px;
     background: #F58634;
     color: #FFF;
-    font-size: 20px;
+    font-size: 23px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -3106,6 +3294,17 @@ line-height: 24px;
     /* 120% */
   }
 
+  #footer-links:hover {
+    cursor: pointer;
+    text-decoration: underline;
+
+    color: #FAFAFA;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 120% */
+  }
   #footer-download-div {
     display: flex;
     gap: 10px;
@@ -3726,6 +3925,9 @@ line-height: normal;
     gap: 10px;
 
   }
+
+  .login-modal{
+    display: none;}
   /* Product Grid/List Start */
 
   #product-grid-list-container{
@@ -4501,11 +4703,11 @@ line-height: 24px;
   .explore-button {
     cursor: pointer;
     position: absolute;
-    left: 15px;
-    bottom:10px;
+    left: 20px;
+    bottom:13px;
     border: none;
-    width: 87px;
-    height: 38px;
+    width: 97px;
+    height: 42px;
     flex-shrink: 0;
     border-radius: 8px;
     background: #F58634;
@@ -4557,6 +4759,17 @@ line-height: 24px;
     /* 120% */
   }
 
+  #footer-links:hover {
+    cursor: pointer;
+    text-decoration: underline;
+
+    color: #FAFAFA;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 120% */
+  }
   #footer-download-div {
     display: flex;
     gap: 10px;

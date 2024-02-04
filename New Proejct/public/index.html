@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <script src="./assets/script/shared/shared.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- <script src="./assets/script/shared/logic.js" defer></script> -->
   <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
@@ -50,16 +50,38 @@
         <a id="account-link" href="#"><i class="ri-account-circle-line"></i></i> Account</a>
       </div>
 
-      <button onclick="openModal()" id="login-button" class="login-btn">Login</button>
+      <button onclick="openModal()" onmouseenter="openDesktopLoginModal()" id="login-button" class="login-btn">Login</button>
 
-    
+ 
 
 
 
     </div>
 
-    
+   
   </nav>
+  <div onmouseleave="closeDesktopLoginModal()" class="login-modal">
+    <div class="header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+        <path d="M20.538 10.3142C23.6603 4.06854 25.2214 0.945691 27.6937 0.945691C30.1661 0.945691 31.7272 4.06854 34.8494 10.3142L52.1888 44.9998C54.7827 50.1886 56.0796 52.783 54.9071 54.68C53.7347 56.5769 50.8341 56.5769 45.0331 56.5769H10.3544C4.55333 56.5769 1.65279 56.5769 0.480316 54.68C-0.692162 52.783 0.604791 50.1886 3.1987 44.9998L20.538 10.3142Z" fill="#F58634"/>
+      </svg>
+<p>Login user</p>
+
+    </div>
+    <div class="content">
+      <div class="input-wrapper">
+        <p>Email</p>
+        <input type="text">
+      </div>
+      <div class="input-wrapper">
+        <p>Password</p>
+        <input type="text">
+        <p class="forgot-password-label" style="align-self: flex-end;">Forgot Password?</p>
+      </div>
+
+      <button onclick="modalLoginButtonClickEvent()" class="login-button">Login</button>
+    </div>
+          </div>
   <div id="sub-header">
     <div id="sub-items">
       <p id="product-sub-header"><a style="text-decoration: none;">Product</a></p>
@@ -106,7 +128,7 @@
   <div id="navbar">
     <h1 class="navbar-title">All Categories</h1>
 
-    <img id="navbar-banner" src="./assets/images/image 2 (1).svg" alt="">
+    <img id="navbar-banner" src="./assets/images/image 2 (1).svg" alt="" loading="lazy">
    
     <div id="nav-main" >
       <div id="nav-container">
@@ -776,17 +798,17 @@
         <div class="swiper-slide">
           <!-- Slides Main Div -->
           <div>
-            <img style="width: 100%; height: auto;" src="./assets/images/banner.svg" alt="">
+            <img style="width: 100%; height: auto; border-bottom: 1px solid lightgray;" src="./assets/images/banner.svg" alt="" loading="lazy">
           </div>
         </div>
         <div class="swiper-slide">
           <div>
-            <img style="width: 100%; height: auto;" src="./assets/images/banner.svg" alt="">
+            <img style="width: 100%; height: auto; border-bottom: 1px solid lightgray;" src="./assets/images/banner.svg" alt="" loading="lazy">
           </div>
         </div>
         <div class="swiper-slide">
           <div>
-            <img style="width: 100%; height: auto;" src="./assets/images/banner.svg" alt="">
+            <img style="width: 100%; height: auto; border-bottom: 1px solid lightgray;" src="./assets/images/banner.svg" alt="" loading="lazy">
           </div>
         </div>
         ...
@@ -828,7 +850,7 @@
             <p class="total">₹ 2,10,000</p>
           </div>
           <div class="chart-bottom">
-            <canvas id="myChart"></canvas>
+            <canvas height="100" id="myChart"></canvas>
           </div>
         </div>
       </div>
@@ -903,49 +925,49 @@
 
   <!-- Brand Start -->
   <div class="swiper" id="swiper-brand">
-    <p class="left-text">SHOP BY BRAND</p>
+    <p class="left-text">Shop By Brand</p>
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide">
         <!-- Slides Main Div -->
         <div class="brand-slide">
-          <img src="./assets/images/brand-01.png" alt="">
+          <img src="./assets/images/brand-01.png" alt="" loading="lazy">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="brand-slide">
-          <img src="./assets/images/brand-02.png" alt="">
+          <img src="./assets/images/brand-02.png" alt="" loading="lazy">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="brand-slide">
-          <img src="./assets/images/brand-03.png" alt="">
-        </div>
-
-      </div>
-
-      <div class="swiper-slide">
-        <div class="brand-slide">
-          <img src="./assets/images/brand-03.png" alt="">
+          <img src="./assets/images/brand-03.png" alt="" loading="lazy">
         </div>
 
       </div>
+
       <div class="swiper-slide">
         <div class="brand-slide">
-          <img src="./assets/images/brand-03.png" alt="">
+          <img src="./assets/images/brand-03.png" alt="" loading="lazy">
         </div>
 
       </div>
       <div class="swiper-slide">
         <div class="brand-slide">
-          <img src="./assets/images/brand-03.png" alt="">
+          <img src="./assets/images/brand-03.png" alt="" loading="lazy">
         </div>
 
       </div>
       <div class="swiper-slide">
         <div class="brand-slide">
-          <img src="./assets/images/brand-03.png" alt="">
+          <img src="./assets/images/brand-03.png" alt="" loading="lazy">
+        </div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="brand-slide">
+          <img src="./assets/images/brand-03.png" alt="" loading="lazy">
         </div>
 
       </div>
@@ -965,67 +987,67 @@
   <hr>
 
   <div class="swiper" id="swiper-category">
-    <p class="left-text">SHOP BY CATEGORY</p>
+    <p class="left-text">Shop By Category</p>
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide swiper-slide-category" style="width: 357px;">
         <div class="card-category">
-          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="">
+          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="" loading="lazy">
           <div>
-            <p class="cat-text">LAPTOPS</p>
+            <p class="cat-text">Laptops</p>
           </div>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="card-category">
-          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="">
+          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="" loading="lazy">
           <div>
-            <p class="cat-text">LAPTOPS</p>
+            <p class="cat-text">Laptops</p>
           </div>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="card-category">
-          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="">
+          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="" loading="lazy">
           <div>
-            <p class="cat-text">LAPTOPS</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="swiper-slide">
-        <div class="card-category">
-          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="">
-          <div>
-            <p class="cat-text">LAPTOPS</p>
+            <p class="cat-text">Laptops</p>
           </div>
         </div>
 
       </div>
+
       <div class="swiper-slide">
         <div class="card-category">
-          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="">
+          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="" loading="lazy">
           <div>
-            <p class="cat-text">LAPTOPS</p>
+            <p class="cat-text">Laptops</p>
           </div>
         </div>
 
       </div>
       <div class="swiper-slide">
         <div class="card-category">
-          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="">
+          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="" loading="lazy">
           <div>
-            <p class="cat-text">LAPTOPS</p>
+            <p class="cat-text">Laptops</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="card-category">
+          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="" loading="lazy">
+          <div>
+            <p class="cat-text">Laptops</p>
           </div>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="card-category">
-          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="">
+          <img class="cat-image" src="./assets/images/category-01.png" alt="" srcset="" loading="lazy">
           <div>
-            <p class="cat-text">LAPTOPS</p>
+            <p class="cat-text">Laptops</p>
           </div>
         </div>
 
@@ -1046,23 +1068,23 @@
   <hr>
 
 
-  <p class="left-text">HOT WIDGETS</p>
+  <p class="left-text">Hot Widgets</p>
   <div class="hot-widgets-div">
 
     <div class="widget-one">
       <div class="widget-top-card-wrapper">
         <div class="widget-card-1">
-          <img class="small-image" src="./widget-01.svg" alt="" srcset="">
+          <img class="small-image" src="./widget-01.svg" alt="" srcset="" loading="lazy">
           <button class="explore-button">Explore</button>
         </div>
         <div class="widget-card-1">
-          <img class="small-image" src="./widget-02.svg" alt="" srcset="">
+          <img class="small-image" src="./widget-02.svg" alt="" srcset="" loading="lazy">
           <button class="explore-button">Explore</button>
 
         </div>
       </div>
       <div class="widget-card-3">
-        <img class="large-image" src="./widget-03.svg" alt="" srcset="">
+        <img class="large-image" src="./widget-03.svg" alt="" srcset="" loading="lazy">
         <button class="explore-button">Explore</button>
 
       </div>
@@ -1070,10 +1092,10 @@
 
 
     <div class="widget-two">
-      <div class="widget-card-3"> <img class="large-image" src="./widget-04.svg" alt="" srcset="">
+      <div class="widget-card-3"> <img class="large-image" src="./widget-04.svg" alt="" srcset="" loading="lazy">
         <button class="explore-button">Explore</button>
       </div>
-      <div class="widget-card-3"> <img class="large-image" src="./widget-05.svg" alt="" srcset="">
+      <div class="widget-card-3"> <img class="large-image" src="./widget-05.svg" alt="" srcset="" loading="lazy">
         <button class="explore-button">Explore</button>
       </div>
     </div>
@@ -1081,7 +1103,7 @@
   <hr>
 
   <div class="banner-wrapper">
-    <img src="./assets/images/banner-bottom.png" alt="" srcset="">
+    <img src="./assets/images/banner-bottom.png" alt="" srcset="" loading="lazy">
   </div>
 
   <!-- Footer Container Start -->
@@ -1202,6 +1224,7 @@ accountSubNavigation.addEventListener('mouseleave',() =>{
         document.getElementById("myOverlay").style.display = "none";
 
         desktopNavbar.classList.add('fade-out');
+        desktopNavbar.style.display = "none";
     
         
       })
@@ -1308,6 +1331,24 @@ accountSubNavigation.addEventListener('mouseleave',() =>{
           return;
         }
        
+      }
+
+      function openDesktopLoginModal(){
+        document.querySelector(".login-modal").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+
+      }
+
+      function closeDesktopLoginModal(){
+        document.querySelector(".login-modal").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+
+      }
+
+
+      function modalLoginButtonClickEvent(){
+        heroSection.style.display = "none";
+        dashboardDiv.style.display = "flex";
       }
      
     </script>

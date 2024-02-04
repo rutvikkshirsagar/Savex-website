@@ -77,7 +77,7 @@ const swiper = new Swiper('.swiper', {
         
       },
       360: {
-        slidesPerView: 1.2,
+        slidesPerView: 1,
       },
       520: {
         slidesPerView: 1.8,
@@ -105,15 +105,16 @@ const swiper = new Swiper('.swiper', {
   });
 
 
-  const ctx = document.getElementById('myChart');
+  const ctx = document.querySelector('#myChart');
 
       new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
+        responsive:true,
         data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: ['HP', 'Lenovo', 'Benq', 'Bose', 'Solarwinds',],
           datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [12, 19, 3, 5, 2, ],
             borderWidth: 1
           }]
         },
