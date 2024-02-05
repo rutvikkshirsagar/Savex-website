@@ -265,7 +265,7 @@
 
   .name {
     color: #000;
-    font-size: 15px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -273,11 +273,12 @@
 
   .address {
     color: #2e2e2e;
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    width: 190px;
+    width: 216px;
+
   }
 
   #payment-details-main {
@@ -348,7 +349,7 @@
   .pricing-details {
     p {
       color: #000;
-      font-size: 14px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 400;
       line-height: 26px; /* 185.714% */
@@ -1538,7 +1539,7 @@
         width: 50%;
         height: 60px;
         flex-shrink: 0;
-        border-radius: 20px 0px 0px 20px;
+        border-radius: 12px 0px 0px 12px;
         border: 1px solid #f58634;
         border-right: 1px solid #f58634;
     
@@ -1561,7 +1562,7 @@
         width: 50%;
         height: 60px;
         flex-shrink: 0;
-        border-radius: 20px 0px 0px 20px;
+        border-radius: 12px 0px 0px 12px;
         border: 1px solid #f58634;
         background-color: #f58634;
         border-right: none;
