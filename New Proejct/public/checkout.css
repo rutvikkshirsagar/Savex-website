@@ -296,7 +296,8 @@
     height: 300px;
     flex-shrink: 0;
     padding: 30px;
-    overflow: scroll;
+    overflow-y: scroll;
+    margin-left: 10px;
   }
 
   #product-item {
@@ -304,6 +305,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: 16px;
 
     .product-title {
       color: #000;
@@ -312,6 +314,7 @@
       font-weight: 400;
       line-height: 24px;
       width: 300px;
+      margin: 0;
     }
     .price {
       color: #000;
@@ -319,6 +322,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: 24px; /* 100% */
+      margin: 0;
     }
     img {
       width: 112px;
@@ -331,6 +335,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 10px;
   }
 
   .item-pricing-details {
@@ -1523,6 +1531,7 @@
         border-radius: 0px 0px 0px 0px;
         display: flex;
         flex-direction: row;
+        padding: 10px;
       }
     
       .child1 {
@@ -1694,6 +1703,7 @@
         align-content: center;
         align-items: center;
         flex-wrap: nowrap;
+        padding: 10px;
       }
     
       #address-select-card:hover {
@@ -1822,21 +1832,24 @@
         margin-top: 20px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        gap: 16px;
     
         .product-title {
           color: #000;
-    font-size: 15px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     width: 100%;
+    margin: 0;
         }
         .price {
           color: #000;
-          font-size: 16px;
+          font-size: 14px;
           font-style: normal;
           font-weight: 700;
+          margin: 0;
            /* 100% */
         }
         img {
@@ -1851,6 +1864,10 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: flex-start;
+        gap: 10px;
       }
     
       .item-pricing-details {
@@ -1922,7 +1939,7 @@
         border-color: #418803;
       }
       .radio-button {
-        width: 33%;
+        width: 42%;
         height: 58px;
         flex-shrink: 0;
         border-radius: 6px;
@@ -1943,7 +1960,7 @@
       }
     
       .coupon-input {
-        width: 68%;
+        width: 86%;
         height: 58px;
         flex-shrink: 0;
         border-radius: 6px;
@@ -1956,7 +1973,7 @@
       .coupon-button {
         order: none;
     display: flex;
-    width: 68%;
+    width: 86%;
     height: 58px;
     justify-content: center;
     align-items: center;
@@ -1991,7 +2008,7 @@
         background-color: #fff;
         outline: none;
         display: flex;
-        width: 34%;
+        width: 42%;
         height: 62px;
         padding: 10px;
         justify-content: center;
@@ -2009,7 +2026,7 @@
     
       .filled-full-button {
         display: flex;
-        width: 378px;
+        width: 100%;
         height: 62px;
         padding: 10px;
         justify-content: center;
@@ -2031,7 +2048,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 20px;
       }
 
 }
