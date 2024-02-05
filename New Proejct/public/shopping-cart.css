@@ -17,6 +17,7 @@
 
   .product-details-container {
     width: 100%;
+    margin-right: 18px;
   }
 
   .product-summary-container {
@@ -66,6 +67,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 200% */
+    cursor: pointer;
   }
 
   #counter {
@@ -216,7 +218,7 @@
   .order-summary-div{
     height: 100%;
     width: 100%;
-    background-color: #ededed;
+    background-color: #f5f5f5;
     margin-top: 20px;
     padding: 20px;
     border-radius: 20px;

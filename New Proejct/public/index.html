@@ -1220,6 +1220,7 @@ accountSubNavigation.addEventListener('mouseleave',() =>{
 
       desktopNavbar.addEventListener('mouseleave',() =>{
         console.log('hide navabr');
+        desktopNavbarContainer.style.display = "none";
         desktopNavbar.classList.remove('fade-in');
         document.getElementById("myOverlay").style.display = "none";
 

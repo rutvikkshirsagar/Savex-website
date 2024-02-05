@@ -38,11 +38,10 @@ cursor: zoom-in;
 
 border: 1px solid rgba(0, 0, 0, 0.30);
     padding: 50px;
-    img{
-        width: 280px;
-height: auto;
-    }
+    
 }
+
+
 #small-images{
     display: flex;
     flex-direction: column;
@@ -86,7 +85,6 @@ height: auto;
 font-size: 54px;
 font-style: normal;
 font-weight: 500;
-line-height: 24px; /* 37.5% */
 letter-spacing: 1.92px;
 }
 #product-text{
@@ -212,14 +210,15 @@ line-height: 50px; /* 125% */
 
 .list-item-spec{
     color: #000;
-font-size: 24px;
-font-style: normal;
-font-weight: 300;
-line-height: 30px; /* 125% */
-display: flex;
-align-items: center;
-justify-content: space-between;
-width: 90%;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    width: 90%;
+    gap: 20px;
 }
 .tabbar p{
     cursor: pointer;
@@ -652,7 +651,7 @@ line-height: normal;
     .card{
         position: relative;
         width: 321px;
-        height: 432px;
+        height: 400px;
         flex-shrink: 0;
         border-radius: 20px;
         background: #FFF;
@@ -669,7 +668,7 @@ line-height: normal;
             position: absolute;
             top: 10px;
             right: 10px;
-            font-size: 44px;
+            font-size: 30px;
             color: red;
         
     }
@@ -840,7 +839,6 @@ line-height: normal;
         font-size: 40px;
         font-style: normal;
         font-weight: 500;
-        line-height: 40px;
         letter-spacing: 1.92px;
     }
     #product-text{
@@ -1346,9 +1344,9 @@ line-height: normal;
         font-style: normal;
         /* font-weight: 300; */
         /* line-height: 23px; */
-        display: flex;
+        display: inline;
         align-items: baseline;
-        justify-content: flex-start;
+        justify-content: space-between;
         width: 100%;
         gap: 30px;
         flex-direction: row;
