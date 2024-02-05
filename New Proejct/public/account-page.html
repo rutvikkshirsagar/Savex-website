@@ -32,23 +32,16 @@
       <i class="ri-search-line"></i>
     </div>
 
-
-
     <div class="nav-right">
       <div class="nav-item-div">
         <a onclick="openModalCart()" href="#"><i class="ri-shopping-cart-line"></i></i> Cart</a>
         <a href="#"><i class="ri-heart-line"></i> Wishlist</a>
         <a href="#"><i class="ri-phone-line"></i></i> Support</a>
         <a href="#"><i class="ri-file-upload-line"></i></i> Excel</a>
-        <a id="account-link" href="#"><i class="ri-account-circle-line"></i></i> Account</a>
+        <a id="account-link" href="#"><i class="ri-account-circle-line"></i> Account</a>
       </div>
 
       <button onclick="openModal()" onmouseenter="openDesktopLoginModal()" id="login-button" class="login-btn">Login</button>
-
- 
-
-
-
     </div>
 
    
@@ -82,7 +75,7 @@
       <p>Digital Collaboration</p>
       <p id="my-account-sub-header">My Account</p>
     </div>
-    <div style="display: flex;" id="account-navbar">
+    <div style="display: none;" id="account-navbar">
    
       <div class="account-nav-item" onclick="toggleAccountSection('account')">
         <div class="account-nav-item-wrapper">
@@ -1050,6 +1043,7 @@ accountSubNavigation.addEventListener('mouseleave',() =>{
         console.log('hide navabr');
         desktopNavbar.classList.remove('fade-in');
         desktopNavbar.classList.add('fade-out');
+        desktopNavbarContainer.style.display = "none";
     
         
       })
