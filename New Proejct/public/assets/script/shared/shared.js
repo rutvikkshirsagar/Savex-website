@@ -31,10 +31,10 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     slidesPerView: 1.5,
     spaceBetween: 30,
-    loop:true,
-    autoplay: {
-        delay: 3000,
-      },
+    loop:false,
+    // autoplay: {
+    //     delay: 3000,
+    //   },
     pagination: {
       el: "#pagination-02",
     },

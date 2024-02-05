@@ -43,16 +43,38 @@
         <a id="account-link" href="#"><i class="ri-account-circle-line"></i></i> Account</a>
       </div>
 
-      <button onclick="openModal()" id="login-button" class="login-btn">Login</button>
+      <button onclick="openModal()" onmouseenter="openDesktopLoginModal()" id="login-button" class="login-btn">Login</button>
 
-    
+ 
 
 
 
     </div>
 
-    
+   
   </nav>
+  <div onmouseleave="closeDesktopLoginModal()" class="login-modal">
+    <div class="header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+        <path d="M20.538 10.3142C23.6603 4.06854 25.2214 0.945691 27.6937 0.945691C30.1661 0.945691 31.7272 4.06854 34.8494 10.3142L52.1888 44.9998C54.7827 50.1886 56.0796 52.783 54.9071 54.68C53.7347 56.5769 50.8341 56.5769 45.0331 56.5769H10.3544C4.55333 56.5769 1.65279 56.5769 0.480316 54.68C-0.692162 52.783 0.604791 50.1886 3.1987 44.9998L20.538 10.3142Z" fill="#F58634"/>
+      </svg>
+<p>Login user</p>
+
+    </div>
+    <div class="content">
+      <div class="input-wrapper">
+        <p>Email</p>
+        <input type="text">
+      </div>
+      <div class="input-wrapper">
+        <p>Password</p>
+        <input type="text">
+        <p class="forgot-password-label" style="align-self: flex-end;">Forgot Password?</p>
+      </div>
+
+      <button onclick="modalLoginButtonClickEvent()" class="login-button">Login</button>
+    </div>
+          </div>
   <div id="sub-header">
     <div id="sub-items">
       <p id="product-sub-header"><a style="text-decoration: none;">Product</a></p>
@@ -61,13 +83,8 @@
       <p id="my-account-sub-header">My Account</p>
     </div>
     <div style="display: none;" id="account-navbar">
-      <div class="account-nav-item">
-<div class="account-nav-item-wrapper">
-  <img src="./assets/icons/dash.png" alt="" srcset="">
-  <p><a style="text-decoration: none;" href="./account-page.html" target="_blank" rel="noopener noreferrer">Account</a></p>
-</div>
-      </div>
-      <div class="account-nav-item">
+   
+      <div class="account-nav-item" onclick="toggleAccountSection('account')">
         <div class="account-nav-item-wrapper">
           <img src="./assets/icons/dash.png" alt="" srcset="">
           <p>Account</p>
@@ -86,13 +103,13 @@
           <p>Address Book</p>
         </div>
       </div>
-      <div class="account-nav-item" onclick="toggleAccountSection('wishlist')">
+      <div class="account-nav-item">
         <div class="account-nav-item-wrapper">
           <img src="./assets/icons/heart-line.png" alt="" srcset="">
           <p>Wishlist</p>
         </div>
       </div>
-      <div class="account-nav-item" onclick="toggleAccountSection('setting')">
+      <div class="account-nav-item">
         <div class="account-nav-item-wrapper">
           <img src="./assets/icons/setting.svg" alt="" srcset="">
           <p>Settings</p>
@@ -104,7 +121,7 @@
   <div id="navbar">
     <h1 class="navbar-title">All Categories</h1>
 
-    <img id="navbar-banner" src="./assets/images/image 2 (1).svg" alt="">
+    <img id="navbar-banner" src="./assets/images/image 2 (1).svg" alt="" loading="lazy">
    
     <div id="nav-main" >
       <div id="nav-container">
@@ -112,8 +129,16 @@
           <h2 id="nav-block-title">HP</h2>
           <div id="nav-items">
             <div id="nav-item-link">
-              <a id="nav-link" href="./products.html">Hp</a>
+              <a id="nav-link">Hp</a>
               <i class="ri-arrow-right-s-line"></i>
+
+              <div class="nav-item-sidenav">
+                <p id="nav-item-link">Desktop</p>
+                <p id="nav-item-link"><a  href="./products.html">Laptop</a></p>
+                <p id="nav-item-link">Workstations</p>
+                <p id="nav-item-link">Gaming Pc's</p>
+                <p id="nav-item-link">Media servers</p>
+              </div>
             </div>
             <div id="nav-item-link">
               <a id="nav-link" href="#">Print</a>
@@ -375,6 +400,7 @@
     </div>
   </div>
 </div>
+
 
   
   <div id="id01" class="w3-modal">
@@ -992,7 +1018,7 @@ if(type === "order"){
 }
 if(type === "account"){
   addressSection.style.display = "none"
-  accountSection.style.display = "block";
+  accountSection.style.display = "flex";
   orderSection.style.display = "none";
   return;
 }
@@ -1130,6 +1156,25 @@ accountSubNavigation.addEventListener('mouseleave',() =>{
           return;
         }
        
+      }
+
+
+      function openDesktopLoginModal(){
+        document.querySelector(".login-modal").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+
+      }
+
+      function closeDesktopLoginModal(){
+        document.querySelector(".login-modal").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+
+      }
+
+
+      function modalLoginButtonClickEvent(){
+        heroSection.style.display = "none";
+        dashboardDiv.style.display = "flex";
       }
   
     </script>
